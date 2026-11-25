@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_그린복지재단</title>
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/media.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header" class="clearfix">
+            <h1 class="logo">
+                <a href="./index.html">
+                    <img src="./images/logo.png" alt="그린복지재단 로고">
+                </a>
+            </h1>
+            <nav class="nav">
+                <ul class="clearfix">
+                    <li><a href="#">재단소개</a>
+                        <ul class="submenu">
+                            <li><a href="#">설립취지</a></li>
+                            <li><a href="#">연혁</a></li>
+                            <li><a href="#">찾아오시는길</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">후원하기</a>
+                        <ul class="submenu">
+                            <li><a href="#">국내후원</a></li>
+                            <li><a href="#">국외후원</a></li>
+                            <li><a href="#">맞춤후원</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">자료실</a>
+                        <ul class="submenu">
+                            <li><a href="#">서식자료실</a></li>
+                            <li><a href="#">사진자료실</a></li>
+                            <li><a href="#">후원양식</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">스토리</a>
+                        <ul class="submenu">
+                            <li><a href="#">웹진</a></li>
+                            <li><a href="#">보고서</a></li>
+                            <li><a href="#">나의 후원</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section id="banner">
+            <h2>
+                <span>같이 하는 삶이 </span>
+                <span>행복한 삶이다</span>
+            </h2>
+            <ul class="clearfix">
+                <li>
+                    <img src="./images/image_1.png" alt="이미지1">
+                </li>
+                <li>
+                    <img src="./images/image_2.png" alt="이미지2">
+                </li>
+                <li>
+                    <img src="./images/image_3.png" alt="이미지3">
+                </li>
+            </ul>
+        </section>
+        <section id="contents" class="clearfix">
+            <article class="notice">
+                <h3>공지사항</h3>
+                <ul>
+                    <li><a href="#">10월 09일 한글날 복지재단 휴교입니다.</a></li>
+                    <li><a href="#">한글날 재정 100주년 기념으로 10월 10일 행사가 있습니다.</a></li>
+                    <li><a href="#">10월 주요 행상 목록을 첨부하였습니다.</a></li>
+                    <li><a href="#">10월 20일 개나리반 학부모님들은 참석하셔서 자리를 채워주세요.</a></li>
+                </ul>
+            </article>
+            <article class="gallery">
+                <h3>겔러리</h3>
+                <ul class="clearfix">
+                    <li>
+                        <img src="./images/gallery_1.jpg" alt="겔러리1">
+                        <span>겔러리1</span>
+                    </li>
+                    <li>
+                        <img src="./images/gallery__2.jpg" alt="겔러리2">
+                        <span>겔러리2</span>
+                    </li>
+                    <li>
+                        <img src="./images/gallery__3.jpg" alt="겔러리3">
+                        <span>겔러리3</span>
+                    </li>
+                </ul>
+            </article>
+            <article class="notice2">
+                <h3>공지사항2</h3>
+                <ul>
+                    <li><a href="#">[재단소식] 2026년 가족돌봄청소년·청년 지원사업 기아대책x서울시 후원연계사업 신청안내</a></li>
+                    <li><a href="#">복지재단 수탁시설」 청년미래센터 센터장 채용 역량면접시험 합격자 및 최종면접시험 안내</a></li>
+                    <li><a href="#">서울시복지재단 「수탁시설」 청년미래센터 센터장 채용 인성검사 합격자 및 역량면접시험 안내</a></li>
+                    <li><a href="#">2026년 제5차 기간제근로자 채용 면접시험 합격자 및 임용등록 안내</a></li>
+                </ul>
+            </article>
+        </section>
+        <footer id="footer" class="clearfix">
+            <article class="f_logo">
+                <a href="#">
+                    <img src="./images/logo.png" alt="푸터로고">
+                </a>
+            </article>
+            <article class="f_menu">
+                <a href="https://hd-hhi.com/kr/etc/privacy-policy" target="_blank">개인정보처리방침</a>
+                <a href="https://hd-hhi.com/kr/etc/cctv-guide" target="_blank">영상정보처리기기 운영관리방침</a>
+                <a href="https://hd-hhi.com/kr/etc/email-policy" target="_blank">이메일 무단수집거부</a>
+                <a href="https://hd-hhi.com/kr/etc/contact/local" target="_blank">문의하기</a>
+            </article>
+            <article class="f_copy">
+                <address>
+                    <span>울산광역시 동구 방어진순환도로 1000</span>
+                    <span>Copyright&copy; 2026 MBC 아카데미 All Rights Reserved.</span>                    
+                </address>
+            </article>
+        </footer>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        //베너 슬라이드_좌우
+        const List = $("#banner > ul");
+
+        setInterval(function(){
+            List.animate({left:"-100%"},600,function(){
+                $("#banner>ul>li:first-child").appendTo(List);
+                List.css("left","0");
+            })
+        },3000);
+
+
+
+        //네비
+        $(".nav>ul>li").mouseover(function(){
+           $(".nav>ul>li").find(".submenu").stop().slideDown();
+        })
+        $(".nav>ul>li").mouseout(function(){
+            $(".nav>ul>li").find(".submenu").stop().slideUp();
+        })
+    </script>
+</body>
+</html>
+

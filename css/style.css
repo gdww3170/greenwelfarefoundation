@@ -1,0 +1,307 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+.clearfix::before, .clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+img{
+    display: block;
+    width: 100%;
+}
+em,address{
+    font-style: normal;
+}
+
+body{
+    background-color: #e9e9e9;
+}
+#wrap{
+    width: 1200px;
+    margin: 0 auto;
+}
+#header{}
+#header > .logo{
+    float: left;
+    width: 200px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#header > .logo > a{}
+#header > .logo > a > img{}
+#header > .nav{
+    float: right;
+    margin-top: 50px;
+}
+#header > .nav > ul{}
+#header > .nav > ul > li{
+    float: left;
+    position: relative;
+}
+#header > .nav > ul > li > a{
+    background-color: #007221;
+    display: block;
+    color: #fff;
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+}
+#header > .nav > ul > li > a:hover{
+    background-color: #999;
+}
+#header > .nav > ul > li > .submenu{
+    position: absolute;
+    z-index: 20;
+    width: 100%;
+    display: none;
+}
+#header > .nav > ul > li > .submenu > li{}
+#header > .nav > ul > li > .submenu > li > a{
+    background-color: lightgreen;
+    display: block;
+    width: 100%;
+    line-height: 50px;
+    font-size: 16px;
+    text-align: center;
+}
+#header > .nav > ul > li > .submenu > li > a:hover{
+    background-color: darkgreen;
+    color: #fff;
+}
+
+#banner{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    /*#banner > h2의 기준점  */
+}
+#banner > h2{
+    position: absolute;
+    top: 30%;
+    right: 5%;
+    z-index: 10;
+    font-family: 'Paperozi';
+    font-weight: 900;
+    font-size: 40px;
+    /* width: 500px;
+    height: 100px; */
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* 방향을 행 -> 열로 변경 */
+    border: 5px solid #007221;
+    padding: 30px;
+
+}
+#banner > h2 > span{
+    display: block;
+}
+#banner > ul{
+    width: 3600px;
+    position: relative;
+}
+#banner > ul > li{
+    width: 1200px;
+    height: 300px;
+    float: left;
+}
+#banner > ul > li > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#contents{}
+#contents > article{
+    width: 400px;
+    height: 200px;
+    padding: 10px;
+    float: left;
+}
+#contents > article > h3{
+    width: 120px;
+    height: 40px;
+    background-color: #007221;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contents > article > ul{
+    border-top: 1px solid #007221;
+    padding-top: 10px;
+}
+
+#contents > .notice{}
+#contents > .notice > ul{}
+#contents > .notice > ul > li{
+    padding: 5px 0;
+    position: relative;
+}
+#contents > .notice > ul > li::before{
+    content: "";
+    display: block;
+    width: 3px;
+    height: 3px;
+    background-color: #007221;
+    position: absolute;
+    top: 15px;
+    left: 3px;
+}
+#contents > .notice > ul > li > a{
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 15px;
+}
+#contents > .gallery{}
+#contents > .gallery > ul{}
+#contents > .gallery > ul > li{
+    width: 120px;
+    height: 130px;
+    background-color: #999;
+    float: left;
+    margin-right: 10px;
+    position: relative;
+    /* span의 기준점 */
+}
+#contents > .gallery > ul > li:nth-of-type(3){
+    margin-right: 0;
+}
+#contents > .gallery > ul > li > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    
+}
+#contents > .gallery > ul > li:nth-of-type(1) > img{
+    object-position: center center;
+}
+#contents > .gallery > ul > li:nth-of-type(2) > img{
+    object-position: center right;
+}
+#contents > .gallery > ul > li:nth-of-type(3) > img{
+    object-position: center left;
+}
+#contents > .gallery > ul > li > span{
+    background-color: #007221;
+    color: #fff;
+    /* display: block; */
+    width: 120px;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.3s;
+    cursor: pointer;
+    /* 커서의 모양을 span에 가면 손모양으로 변경 */
+}
+#contents > .gallery > ul > li:active > span{
+    opacity: 0%;
+}
+/* 
+    li:hover : li에 마우스를 올려놨을때 이벤트 발생
+    li:active : li를 누르고 있는 동안 이벤트 발생
+*/
+
+#contents > .notice2{}
+#contents > .notice2 > ul{}
+#contents > .notice2 > ul > li{
+    padding: 5px 0;
+}
+#contents > .notice2 > ul > li > a{    
+    /* 말줄임표 4종셋트 */
+    display: block;
+    white-space: nowrap;
+    /* 모든 텍스트를 한줄로 표기 */
+    overflow: hidden;
+    /* 넓이값 밖으로 나간 텍스트를 감추기 */
+    text-overflow: ellipsis;
+    /* 텍스트가 넘쳤을때 "..." 넣어주는 명령어 */
+
+    padding-left: 15px;
+    /* 가상요소(블릿기호)넣을 위치를 만들기위해 왼쪽_안쪽 여백설정*/
+
+    position: relative;
+    /*a::before의 기준점  */
+}
+#contents > .notice2 > ul > li > a::before{
+    content: "";
+    display: block;
+    width: 3px;
+    height: 3px;
+    background-color: #007221;
+    /* 가상요소 위치 지정 */
+    position: absolute;
+    top: 10px;
+    left: 0;
+    border-radius: 50%;
+    /* 정사각형일때 정원이 나옴 */
+}
+
+
+/*  a::before  : a태그 앞쪽에 가상 영역을 만드는 명령어 */
+
+#footer{
+    background-color: #007221;
+    color: #fff;
+}
+#footer > article{
+    width: 1000px;
+    height: 50px;
+    float: left;
+    display: flex;
+    /* 자식을 가로로 정렬하는 명령어 */
+    justify-content: center;
+    align-items: center;
+    
+}
+#footer > .f_logo{
+    /* background-color: lightcoral; */
+    width: 200px;
+    height: 100px;
+    
+}
+#footer > .f_logo > a{}
+#footer > .f_logo > a > img{
+    filter: grayscale(100%);
+    /* 필터 : 회색톤으로 변경 */
+}
+#footer > .f_menu{}
+#footer > .f_menu > a{
+    margin-right: 23px;
+}
+#footer > .f_menu > a:last-child{
+    margin-right: 0;
+}
+#footer > .f_menu > a:nth-of-type(1){
+    font-weight: bold;
+}
+#footer > .f_copy > address{
+    display: flex;
+    text-align: center;
+    flex-direction: column;    
+}

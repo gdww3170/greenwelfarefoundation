@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+@media(max-width:1210px){
+    #wrap{width: 100%; padding: 0 10px;}
+    #header{padding: 0 10px;}
+    #banner > ul{width: 300%;}
+    #banner > ul > li{width: 33.3%;}
+    #banner > ul > li > img{width: 100%;}
+    #contents > article{width: 50%;}
+    #contents > .notice2{width: 100%;}
+    #contents > .gallery > ul > li{width: 30%; margin-right: 5%;}
+    #contents > .gallery > ul > li > span{width: 100%;}
+    #footer{padding: 0 10px;}
+    #footer > article{width: 100%; height: auto; flex-wrap: wrap;
+    margin-bottom: 10px;}
+    #footer > .f_logo{width: 100%;}
+/* 플랙스 랩 공간이부족하면 밑으로떨어져라! 디스플레이 플렉스 가로로만 슝갈게~ */
+}
+
+
+@media(max-width:1024px){ 
+    #header > .nav > ul > li > a{width: 100px;}
+
+}
+@media(max-width:960px){}
+@media(max-width:768px){
+    #header > .logo{width: 100%;}
+    #header > .nav{display: none;}
+    #contents > article{width: 100%;}
+}
+@media(max-width:600px){}
+@media(max-width:320px){}
